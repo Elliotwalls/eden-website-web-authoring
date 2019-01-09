@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+		
+<head>
+	<title> Eden/albulms </title>
+	<link rel="stylesheet" href="css/stylealbums.css">
+	<script src="JS/albumjav.js"></script>
+</head>
+<body>
+	<img src="assets/banner.png" alt = "Eden Banner"  id = "banner">
+	<nav class="nav" role="navigation">
+  <ul class="nav-list">
+    <li id = "album" ><a href="albums.html">Album</a></li>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="tour.html">Tours</a></li>
+    <li><a href="links.html">Links</a></li>
+  </ul>
+	<img src = "https://upload.wikimedia.org/wikipedia/en/b/b6/I_Think_You_Think_Too_Much_Of_Me_Album_Cover%2C_July_2016.jpg" alt ="I think youthink too much of me album" class ="album" id= "toomuch" onclick="myfunction()">
+	<img src = "https://static.ising.pl/songs/23311/cover_640.jpg" alt ="wake up album" class ="album" id= "wake" onclick="myfunction2()">
+	<img src ="https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Vertigo_EDEN_Album_Cover.png/220px-Vertigo_EDEN_Album_Cover.png" alt ="vertigo album" class ="album" id = "verti" onclick="myfunction3()">
+	
+	<ul id = "vertigo">
+		<li class = "no">Vertigo</li>
+		<li>wrong</li>
+		<li>Take Care</li>
+		<li>Start//End</li>
+		<li>Wings</li>
+		<li>Icarus</li>
+		<li>Lost//Found</li>
+		<li>Crash</li>
+		<li>Gold</li>
+		<li>Forever//Over</li>
+		<li>Float</li>
+		<li>Wonder</li>
+		<li>Love; Not Wrong (Brave)</li>
+		<li>Falling in Reverse</li>
+	</ul>	
+	<ul id = "wakeup">
+		<li class = "no">Wakeup</li>
+		<li>02:09</li>
+		<li>End Credits</li>
+		<li>Gravity</li>
+		<li>Nocturne</li>
+		<li>Interlude</li>
+		<li>Wake Up</li>
+		<li>Catch Me If You Can</li>
+	</ul>
+	<ul id = "ithink">
+		<li class = "no">I think you think too much of me</li>
+		<li>Sex </li>
+		<li>Drugs </li>
+		<li>And</li>
+		<li>Rock + Roll </li>
+		<li>Fumes</li>
+		<li>XO </li>
+		<li>Circles</li>
+	</ul>
+<script language="javascript" type="text/javascript">
+	 document.getElementById("ithink").style.display='none';
+	 document.getElementById('wakeup').style.display='none';
+	 document.getElementById('vertigo').style.display='none';
+	 function myfunction(){
+		document.getElementById("ithink").style.display='block';
+	 document.getElementById('wakeup').style.display='none';
+	 document.getElementById('vertigo').style.display='none';
+	 }
+	 function myfunction2(){
+		document.getElementById("ithink").style.display='none';
+	 document.getElementById('wakeup').style.display='block';
+	 document.getElementById('vertigo').style.display='none';
+	 }
+	 function myfunction3(){
+		document.getElementById("ithink").style.display='none';
+	 document.getElementById('wakeup').style.display='none';
+	 document.getElementById('vertigo').style.display='block';
+	 }
+	 
+</script>
+		
+</body>
