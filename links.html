@@ -2,9 +2,8 @@
 <html>
 		
 <head>
-	<title> Eden/links </title>
-	<link rel="stylesheet" href="CSS/stylelinks.css" type ="text/css">
-	
+	<title> Eden/custom/album </title>
+		<link rel="stylesheet" href="css/stylelinks.css" type ="text/css">
 </head>
 <body>
 	<img src="assets/banner.png" alt = "Eden Banner"  id = "banner">
@@ -13,36 +12,67 @@
     <li id = "album" ><a href="albums.html">Album</a></li>
     <li><a href="home.html">Home</a></li>
     <li><a href="tour.html">Tours</a></li>
-    <li><a href="links.html">links</a></li>
+    <li><a href="links.html">yours</a></li>
   </ul>
-  <div class="slider-holder">
-        <span id="slider-image-1"></span>
-        <span id="slider-image-2"></span>
-        <span id="slider-image-3"></span>
-        <div class="image-holder">
-            <p  class="slider-image" class ="text" >
-			social media<br>
-			<a href="https://www.facebook.com/iameden/">Facebook</a><br>
-			<a href="https://twitter.com/iameden?lang=en">Twitter</a>
-			</p>
-			<p  class="slider-image" class ="text">
-			Offical Websites<br><br></li>
-			<a href="https://www.facebook.com/iameden/">offical website</a><br>
-			<a href="https://twitter.com/iameden?lang=en">Merchandice</a><br>
-			<a href="https://www.ents24.com/uk/tour-dates/eden-ireland">Book tour tickets</a>
-			</p>
-			<p  class="slider-image" class ="text">
-			thanks for looking at my website <br>
-			didn't know what to put <br>
-			for the rest of the website<br> 
-			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">so if you want heres a puppy</a>
-			</p>
-			
-        </div>
-        <div class="button-holder">
-            <a href="#slider-image-1" class="slider-change"></a>
-            <a href="#slider-image-2" class="slider-change"></a>
-            <a href="#slider-image-3" class="slider-change"></a>
-        </div>
-    </div>
-</body>
+<div class="container">
+  
+  <div class="collection" id="dropable" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="songalbum" id="songcount"></div>
+    <span class="heading">Add songs to your dream eden album</span>
+    <ul class="grid" id="target-grid">
+      
+    </ul>
+    <img src ="assets/eden.jpg" id = "image">
+  </div>
+  
+  
+  <div class="collection draggablediv" >
+    <span class="heading">Songs </span><br />
+    <ul class="grid">
+      <li draggable="true" class="draggable" ondragstart="drag(event)" id="item1">02:09</li>
+      <li draggable="true" class="draggable" ondragstart="drag(event)" id="item2">End Credits</li>
+      <li draggable="true" class="draggable" ondragstart="drag(event)" id="item3">Gravity</li>
+      <li draggable="true" class="draggable" ondragstart="drag(event)" id="item4">Nocturne</li>
+      <li draggable="true" class="draggable" ondragstart="drag(event)" id="item5">Interlude</li>
+      <li draggable="true" class="draggable" ondragstart="drag(event)" id="item6">Wake Up</li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item7">Sex </li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item8">Drugs </li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item9">And</li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item10">Rock + Roll </li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item11">Fumes</li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item12">XO </li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item13">Catch Me</li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item14">Start//End</li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item15">Gold</li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item16">Forever//Over</li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item17">Falling </li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item18">Wonder</li>
+	  <li draggable="true" class="draggable" ondragstart="drag(event)" id="item19">Crash</li>
+	  
+    </ul>  
+  </div>
+</div>
+<head>
+<script language="javascript" type="text/javascript">
+var songCount = 0;
+function allowDrop(event)
+{
+  event.preventDefault();
+}
+
+function drag(event)
+{   event.dataTransfer.setData("Item",event.target.id);
+}
+
+function drop(event)
+{
+  songCount = songCount + 1;
+  event.preventDefault();
+  var data=event.dataTransfer.getData("Item");
+  $targetElement = document.getElementById('target-grid');
+  $selectedElement = document.getElementById(data);
+ $targetElement.appendChild($selectedElement);
+ document.getElementById('itemcount').innerHTML = (itemCount+" Items");
+  $selectedElement.innerHTML += "<i class='icon-remove' data-item="+data+"></i>"; 
+}
+</script>
