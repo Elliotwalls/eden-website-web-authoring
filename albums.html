@@ -3,22 +3,30 @@
 		
 <head>
 	<title> Eden/albulms </title>
+	<!-- links style sheet --> 
+
 	<link rel="stylesheet" href="css/stylealbums.css">
 	<script src="JS/albumjav.js"></script>
 </head>
 <body>
+<!-- banner at the top of the page --> 
 	<img src="assets/banner.png" alt = "Eden Banner"  id = "banner">
 	<nav class="nav" role="navigation">
+		<!-- links to other pages --> 
+
   <ul class="nav-list">
     <li id = "album" ><a href="albums.html">Album</a></li>
     <li><a href="home.html">Home</a></li>
     <li><a href="tour.html">Tours</a></li>
     <li><a href="links.html">yours</a></li>
   </ul>
+  <!-- album covers with onclick events on them linking to bottom of the page  --> 
+
 	<img src = "https://upload.wikimedia.org/wikipedia/en/b/b6/I_Think_You_Think_Too_Much_Of_Me_Album_Cover%2C_July_2016.jpg" alt ="I think youthink too much of me album" class ="album" id= "toomuch" onclick="myfunction()">
 	<img src = "https://static.ising.pl/songs/23311/cover_640.jpg" alt ="wake up album" class ="album" id= "wake" onclick="myfunction2()">
 	<img src ="https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Vertigo_EDEN_Album_Cover.png/220px-Vertigo_EDEN_Album_Cover.png" alt ="vertigo album" class ="album" id = "verti" onclick="myfunction3()">
-	
+	<!-- lists of the ablbum --> 
+
 	<ul id = "vertigo">
 		<li class = "no">Vertigo</li>
 		<li>wrong</li>
@@ -55,11 +63,15 @@
 		<li>XO </li>
 		<li>Circles</li>
 	</ul>
+	<!--javascript  --> 
+
 <script language="javascript" type="text/javascript">
+<!-- makes all album lists invisible --> 
 	 document.getElementById("ithink").style.display='none';
 	 document.getElementById('wakeup').style.display='none';
 	 document.getElementById('vertigo').style.display='none';
 	 function myfunction(){
+	 <!-- makes one list appear and hides the rest --> 
 		document.getElementById("ithink").style.display='block';
 	 document.getElementById('wakeup').style.display='none';
 	 document.getElementById('vertigo').style.display='none';

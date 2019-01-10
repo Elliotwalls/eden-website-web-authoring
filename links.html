@@ -3,17 +3,23 @@
 		
 <head>
 	<title> Eden/custom/album </title>
+	<!-- links style sheet --> 
+
 		<link rel="stylesheet" href="css/stylelinks.css" type ="text/css">
 </head>
 <body>
+<!-- banner at the top of the page --> 
 	<img src="assets/banner.png" alt = "Eden Banner"  id = "banner">
 	<nav class="nav" role="navigation">
   <ul class="nav-list">
+  	<!-- links to other pages --> 
+
     <li id = "album" ><a href="albums.html">Album</a></li>
     <li><a href="home.html">Home</a></li>
     <li><a href="tour.html">Tours</a></li>
     <li><a href="links.html">yours</a></li>
   </ul>
+  <!-- place where you put the songs you like --> 
 <div class="container">
   
   <div class="collection" id="dropable" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -22,10 +28,9 @@
     <ul class="grid" id="target-grid">
       
     </ul>
-    <img src ="assets/eden.jpg" id = "image">
   </div>
   
-  
+      <!-- where all the songs are originally stored are stored --> 
   <div class="collection draggablediv" >
     <span class="heading">Songs </span><br />
     <ul class="grid">
@@ -53,17 +58,20 @@
   </div>
 </div>
 <head>
+<!-- javascript --> 
 <script language="javascript" type="text/javascript">
+<!-- varible to hold number of songs --> 
 var songCount = 0;
+
 function allowDrop(event)
 {
   event.preventDefault();
 }
-
+<!-- dragging of element --> 
 function drag(event)
 {   event.dataTransfer.setData("Item",event.target.id);
 }
-
+<!-- storing element in new area and removes from previous area --> 
 function drop(event)
 {
   songCount = songCount + 1;
@@ -74,5 +82,9 @@ function drop(event)
  $targetElement.appendChild($selectedElement);
  document.getElementById('itemcount').innerHTML = (itemCount+" Items");
   $selectedElement.innerHTML += "<i class='icon-remove' data-item="+data+"></i>"; 
+  /*  tried to have local meory and refresh button for it but couldnt get it too work*/
 }
+
+
+
 </script>

@@ -83,7 +83,7 @@ ul.grid li{
   max-width: 450px;
   background: #d8c3c5;
   margin-right: 20%;
-  bottom: 300px;
+  
 	
 }
 .draggablediv{
@@ -102,6 +102,7 @@ ul.grid li{
   color: d8c3c5;
   float: right;
 }
+/*  was for refresh button with local memory but couldnt get too work*/
 #image {
 	width: 350px;
 	height: 200px;

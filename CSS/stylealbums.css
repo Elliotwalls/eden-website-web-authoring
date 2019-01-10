@@ -55,11 +55,13 @@ body{
 	font-size: 10px ;
 	font-family: "Bahnschrift", "Light", "SemiCondensed";
 }
+/*  formats albums image*/
 .album{
 	width: 20%;
 	height: 20%;
 	margin: 5%;
 }
+/*  formats list*/
 li.no {
     list-style-type: none;
 	font-family: "Bahnschrift", "Light", "SemiCondensed";
